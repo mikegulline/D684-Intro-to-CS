@@ -1,4 +1,4 @@
-// start: run nodemon dsa/quicksort.js
+// start: run nodemon dsa/quick-sort.js
 // stop: run Ctrl + C
 
 /*
