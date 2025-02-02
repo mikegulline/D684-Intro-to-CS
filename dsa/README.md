@@ -46,8 +46,6 @@ Heap Sort is a comparison-based sorting algorithm that uses a **binary heap** to
 | Average Case | O(n log n)      | O(1)             |
 | Best Case    | O(n log n)      | O(1)             |
 
-🚀 **Best for:** Priority-based sorting where constant-time max/min retrieval is important.
-
 ---
 
 ## 🔹 Insertion Sort
@@ -82,8 +80,6 @@ Merge Sort is a **divide-and-conquer** algorithm that recursively splits the arr
 | Average Case | O(n log n)      | O(n)             |
 | Best Case    | O(n log n)      | O(n)             |
 
-🚀 **Best for:** Sorting large datasets where stability is required.
-
 ---
 
 ## 🔹 Quick Sort
@@ -101,8 +97,6 @@ Quick Sort is an efficient **divide-and-conquer** sorting algorithm. It selects 
 | Average Case | O(n log n)               | O(log n)         |
 | Best Case    | O(n log n)               | O(log n)         |
 
-🚀 **Optimization:** Using a **random pivot** or **median-of-three** can avoid worst-case performance.
-
 ---
 
 ## 🔹 Radix Sort
@@ -119,8 +113,6 @@ Radix Sort is a **non-comparative sorting algorithm** that works by sorting numb
 | Worst Case   | O(nk)           | O(n + k)         |
 | Average Case | O(nk)           | O(n + k)         |
 | Best Case    | O(nk)           | O(n + k)         |
-
-🚀 **Best for:** Sorting large datasets of numbers where `k` (number of digits) is small.
 
 ---
 
@@ -140,34 +132,3 @@ Selection Sort repeatedly finds the minimum element from the unsorted portion an
 | Best Case    | O(n²) (already sorted) | O(1)             |
 
 ---
-
-## 💡 Summary of Sorting Algorithms
-
-| Algorithm          | Best Case  | Average Case | Worst Case | Space Complexity | Stable? |
-| ------------------ | ---------- | ------------ | ---------- | ---------------- | ------- |
-| **Bubble Sort**    | O(n)       | O(n²)        | O(n²)      | O(1)             | ✅ Yes  |
-| **Heap Sort**      | O(n log n) | O(n log n)   | O(n log n) | O(1)             | ❌ No   |
-| **Insertion Sort** | O(n)       | O(n²)        | O(n²)      | O(1)             | ✅ Yes  |
-| **Merge Sort**     | O(n log n) | O(n log n)   | O(n log n) | O(n)             | ✅ Yes  |
-| **Quick Sort**     | O(n log n) | O(n log n)   | O(n²)      | O(log n)         | ❌ No   |
-| **Radix Sort**     | O(nk)      | O(nk)        | O(nk)      | O(n + k)         | ✅ Yes  |
-| **Selection Sort** | O(n²)      | O(n²)        | O(n²)      | O(1)             | ❌ No   |
-
-📌 **Stable Sort**: A sorting algorithm is **stable** if it maintains the relative order of equal elements.  
-📌 **In-Place Sort**: All algorithms here use **O(1) or O(log n) space**, except Merge Sort and Radix Sort.
-
----
-
-### 🔥 **How to Run the Sorting Algorithms**
-
-You can test each sorting algorithm using Node.js:
-
-```sh
-node bubble-sort.js
-node heap-sort.js
-node insertion-sort.js
-node merge-sort.js
-node quick-sort.js
-node radix-sort.js
-node selection-sort.js
-```
