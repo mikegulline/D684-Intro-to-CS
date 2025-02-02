@@ -64,17 +64,37 @@ console.log('=====================');
 // then pass array
 /////////////////////////////
 
+// const qsFnArr = (fn) => (arr) => {
+//   if (arr.length <= 1) return arr;
+
+//   const pivotIndex = Math.floor(arr.length / 2);
+//   const pivot = arr[pivotIndex];
+
+//   const left = arr.filter((n) => fn(n, pivot) < 0);
+//   const equals = arr.filter((n) => fn(n, pivot) === 0);
+//   const right = arr.filter((n) => fn(n, pivot) > 0);
+
+//   return [...qsFnArr(fn)(left), ...equals, ...qsFnArr(fn)(right)];
+// };
+
 const qsFnArr = (fn) => (arr) => {
   if (arr.length <= 1) return arr;
 
   const pivotIndex = Math.floor(arr.length / 2);
   const pivot = arr[pivotIndex];
 
-  const left = arr.filter((n) => fn(n, pivot) < 0);
-  const equals = arr.filter((n) => fn(n, pivot) === 0);
-  const right = arr.filter((n) => fn(n, pivot) > 0);
+  const left = [];
+  const equal = [];
+  const right = [];
 
-  return [...qsFnArr(fn)(left), ...equals, ...qsFnArr(fn)(right)];
+  for (const item of arr) {
+    const compare = fn(item, pivot);
+    if (compare < 0) left.push(item);
+    else if (compare > 0) right.push(item);
+    else equal.push(item);
+  }
+
+  return [...qsFnArr(fn)(left), ...equal, ...qsFnArr(fn)(right)];
 };
 
 /////////////////////////////
