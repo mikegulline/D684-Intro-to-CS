@@ -14,7 +14,7 @@ This directory contains implementations of common sorting algorithms in JavaScri
 
 ---
 
-## 🔹 Bubble Sort
+## Bubble Sort
 
 📄 **File:** [bubble-sort.js](./bubble-sort.js)
 
@@ -31,7 +31,7 @@ Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps
 
 ---
 
-## 🔹 Heap Sort
+## Heap Sort
 
 📄 **File:** [heap-sort.js](./heap-sort.js)
 
@@ -48,7 +48,7 @@ Heap Sort is a comparison-based sorting algorithm that uses a **binary heap** to
 
 ---
 
-## 🔹 Insertion Sort
+## Insertion Sort
 
 📄 **File:** [insertion-sort.js](./insertion-sort.js)
 
@@ -65,7 +65,7 @@ Insertion Sort builds the sorted list one element at a time, inserting each item
 
 ---
 
-## 🔹 Merge Sort
+## Merge Sort
 
 📄 **File:** [merge-sort.js](./merge-sort.js)
 
@@ -82,7 +82,7 @@ Merge Sort is a **divide-and-conquer** algorithm that recursively splits the arr
 
 ---
 
-## 🔹 Quick Sort
+## Quick Sort
 
 📄 **File:** [quick-sort.js](./quick-sort.js)
 
@@ -99,7 +99,7 @@ Quick Sort is an efficient **divide-and-conquer** sorting algorithm. It selects 
 
 ---
 
-## 🔹 Radix Sort
+## Radix Sort
 
 📄 **File:** [radix-sort.js](./radix-sort.js)
 
@@ -116,7 +116,7 @@ Radix Sort is a **non-comparative sorting algorithm** that works by sorting numb
 
 ---
 
-## 🔹 Selection Sort
+## Selection Sort
 
 📄 **File:** [selection-sort.js](./selection-sort.js)
 
