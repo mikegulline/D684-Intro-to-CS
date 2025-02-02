@@ -42,6 +42,11 @@ const arrStrings = [
   'train',
   'window',
 ];
+const arrPeople = [
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 20 },
+  { name: 'Alice', age: 25 },
+];
 
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
@@ -110,3 +115,11 @@ const qsNumbers = qsFnArr(fnCompareNumbers);
 console.log(qsNumbers(arrNumbers));
 // or
 console.log(qsFnArr(fnCompareNumbers)(arrNumbers));
+
+/////////////////////////////
+const fnComparePeopleAge = (a, b) => a.age - b.age;
+console.log(qsFnArr(fnComparePeopleAge)(arrPeople));
+
+/////////////////////////////
+const fnComparePeopleName = (a, b) => a.name.localeCompare(b.name);
+console.log(qsFnArr(fnComparePeopleName)(arrPeople));
