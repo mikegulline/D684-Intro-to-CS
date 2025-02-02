@@ -28,13 +28,15 @@
 // return new array
 // [...fn(left), pivot, ...fn(right)]
 
-const arrNumbers = [1, 5, 10, 3, 44, 6, 100, 33, 92, 9, 18, 55, 200];
+const arrNumbers = [1, 5, 5, 5, 5, 10, 3, 44, 6, 100, 33, 92, 9, 18, 55, 200];
 const arrStrings = [
   'vibe',
   'check',
   'one',
   'two',
   'three',
+  'a',
+  'a',
   'a',
   'car',
   'train',
@@ -69,9 +71,10 @@ const qsFnArr = (fn) => (arr) => {
   const pivot = arr[pivotIndex];
 
   const left = arr.filter((n) => fn(n, pivot) < 0);
+  const equals = arr.filter((n) => fn(n, pivot) === 0);
   const right = arr.filter((n) => fn(n, pivot) > 0);
 
-  return [...qsFnArr(fn)(left), pivot, ...qsFnArr(fn)(right)];
+  return [...qsFnArr(fn)(left), ...equals, ...qsFnArr(fn)(right)];
 };
 
 /////////////////////////////
