@@ -1,33 +1,12 @@
-export const arrNumbers = [
-  1, 5, 5, 5, 5, 10, 3, 44, 6, 100, 33, 92, 9, 18, 55, 200,
-];
-export const arrStrings = [
-  'vibe',
-  'check',
-  'one',
-  'two',
-  'three',
-  'a',
-  'a',
-  'a',
-  'car',
-  'train',
-  'window',
-];
-export const arrPeople = [
-  { name: 'Bob', age: 30 },
-  { name: 'Charlie', age: 20 },
-  { name: 'Alice', age: 25 },
-];
+// nodemon index.js
 
-export const compareNumbers = (a, b) => a - b;
-export const compareStrings = (a, b) => a.localeCompare(b);
-export const compareObjAge = (a, b) => a.age - b.age;
-export const compareObjName = (a, b) => a.name.localeCompare(b.name);
+import { sort, functions, arrays, types, log, test } from './utils.js';
 
-export const log = (name) => {
+for (let i = 0; i < 4; i++) {
+  log(types[i]);
+  test('  merge     ', sort.merge(functions[i]), arrays[i]);
+  test('  insertion ', sort.insertion(functions[i]), arrays[i]);
+  test('  quick     ', sort.quick(functions[i]), arrays[i]);
+  test('  selection ', sort.selection(functions[i]), arrays[i]);
   console.log('');
-  console.log('=========================');
-  console.log(name.padEnd(25, '='));
-  console.log('=========================');
-};
+}

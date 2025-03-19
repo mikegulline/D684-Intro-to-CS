@@ -1,16 +1,6 @@
-// nodemon selection-sort.js
-import {
-  arrNumbers,
-  arrStrings,
-  arrPeople,
-  compareNumbers,
-  compareStrings,
-  compareObjAge,
-  compareObjName,
-  log,
-} from './index.js';
+// nodemon index.js
 
-const selectionSortFnArr = (fn) => (arr) => {
+export const selection = (fn) => (arr) => {
   let i, j, smallestIndex, temp;
 
   for (i = 0; i < arr.length - 1; i++) {
@@ -27,10 +17,3 @@ const selectionSortFnArr = (fn) => (arr) => {
 
   return arr;
 };
-
-log('SelectionSort');
-
-console.log(selectionSortFnArr(compareNumbers)(arrNumbers));
-console.log(selectionSortFnArr(compareStrings)(arrStrings));
-console.log(selectionSortFnArr(compareObjName)(arrPeople));
-console.log(selectionSortFnArr(compareObjAge)(arrPeople));

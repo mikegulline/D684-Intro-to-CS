@@ -1,17 +1,6 @@
-// nodemon insertion-sort.js
+// nodemon index.js
 
-import {
-  arrNumbers,
-  arrStrings,
-  arrPeople,
-  compareNumbers,
-  compareStrings,
-  compareObjAge,
-  compareObjName,
-  log,
-} from './index.js';
-
-const insertionSort = (fn) => (arr) => {
+export const insertion = (fn) => (arr) => {
   let i, j, temp;
 
   for (i = 1; i < arr.length; i++) {
@@ -26,10 +15,3 @@ const insertionSort = (fn) => (arr) => {
 
   return arr;
 };
-
-log('InsertionSort');
-
-console.log(insertionSort(compareStrings)(arrStrings));
-console.log(insertionSort(compareNumbers)(arrNumbers));
-console.log(insertionSort(compareObjAge)(arrPeople));
-console.log(insertionSort(compareObjName)(arrPeople));

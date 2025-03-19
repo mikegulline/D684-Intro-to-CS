@@ -1,17 +1,6 @@
-// nodemon quick-sort.js
+// nodemon index.js
 
-import {
-  arrNumbers,
-  arrStrings,
-  arrPeople,
-  compareNumbers,
-  compareStrings,
-  compareObjAge,
-  compareObjName,
-  log,
-} from './index.js';
-
-const quickSortFnArr = (fn) => (arr) => {
+export const quick = (fn) => (arr) => {
   if (arr.length <= 1) return arr;
 
   const pivotIndex = Math.floor(arr.length / 2);
@@ -28,12 +17,5 @@ const quickSortFnArr = (fn) => (arr) => {
     else equal.push(item);
   }
 
-  return [...quickSortFnArr(fn)(left), ...equal, ...quickSortFnArr(fn)(right)];
+  return [...quick(fn)(left), ...equal, ...quick(fn)(right)];
 };
-
-log('QuickSort');
-
-console.log(quickSortFnArr(compareStrings)(arrStrings));
-console.log(quickSortFnArr(compareNumbers)(arrNumbers));
-console.log(quickSortFnArr(compareObjAge)(arrPeople));
-console.log(quickSortFnArr(compareObjName)(arrPeople));
